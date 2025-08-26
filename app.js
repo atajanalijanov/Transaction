@@ -1,5 +1,5 @@
 const express = require("express")
-const indexRouter = require("./router/index.js")
+const indexRouter = require("./routes/index.js")
 require('dotenv').config()
 const port = process.env.PORT || 3001;
 var app = express()

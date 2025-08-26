@@ -1,0 +1,10 @@
+const express = require("express")
+const router = express.Router()
+const {finacecalculator} = require("../models")
+const controller =require('../controllers/finance_calculator')
+
+router.get("/", controller.getIndex)
+router.get('/add', controller.getAdd)
+router.post('/form', controller.pastForm)
+
+module.exports = router;

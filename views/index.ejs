@@ -8,10 +8,17 @@
 </head>
 <body>
     <a href="./add">ADD</a>
-    <ul>
-        <% users.forEach(function(finance){ %>
-            <%- include('table/show', {finance: finance}); %>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+        <% transactions.forEach(function(transaction){ %>
+            <%- include('table/row', {transaction}); %>
         <% }); %>
-    </ul>
+    </table>
 </body>
 </html>

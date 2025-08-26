@@ -1,5 +1,9 @@
-const form = require('./actins/form')
+const getAdd = require('./actins/getAdd')
+const getIndex = require('./actins/getIndex')
+const pastForm = require('./actins/pastForm')
 
 module.exports = {
-    form
+    getIndex,
+    getAdd,
+    pastForm
 }

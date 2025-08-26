@@ -1,13 +1,14 @@
 {
   "scripts": {
     "start": "node app.js",
-    "dew": "nodemon app.js",
-    "migrate":"npx sequelize-cli db:migrate"
+    "dev": "nodemon app.js",
+    "migrate": "npx sequelize-cli db:migrate"
   },
   "dependencies": {
     "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
+    "jsdom": "^26.1.0",
     "mysql2": "^3.14.3",
     "nodemon": "^3.1.10",
     "sequelize": "^6.37.7"
