@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finace calculator</title>
+    <link rel="stylesheet" href="finance.css">
+</head>
+<body>
+    <a href="./add">ADD</a>
+    <ul>
+        <% users.forEach(function(finance){ %>
+            <%- include('table/show', {finance: finance}); %>
+        <% }); %>
+    </ul>
+</body>
+</html>
