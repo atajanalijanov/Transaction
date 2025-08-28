@@ -4,11 +4,13 @@ body{
     flex-direction: column;
 }
 a{
+    text-decoration: none;
+}
+.add{
     width: 100px;
     display: flex;
     justify-content: center;
     color: #ffffff;
-    text-decoration: none;
     background-color: #0d6efd;
     border-radius: 50px;
     padding: 3px 15px;

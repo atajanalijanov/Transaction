@@ -4,7 +4,11 @@
     <td><%= transaction.type %></td>
     <td><%= transaction.createdAt %></td>
     <td>
-        <button></button>
-        <button></button>
+        <a href="/edit/<%= transaction.id %>">
+            <img src="/img/edit.svg" alt="" srcset="">
+        </a>
+        <a href="/delete/<%= transaction.id %>">
+            <img src="/img/delete.svg" alt="" srcset="">
+        </a>
     </td>
 </tr>

@@ -6,5 +6,8 @@ const controller =require('../controllers/finance_calculator')
 router.get("/", controller.getIndex)
 router.get('/add', controller.getAdd)
 router.post('/form', controller.pastForm)
+router.get('/edit/:id', controller.edit)
+router.post('/update/:id', controller.update)
+router.get('/delete/:id', controller.remove)
 
 module.exports = router;

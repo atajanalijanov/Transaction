@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finace calculator</title>
+    <title>Edit</title>
     <link rel="stylesheet" href="/css/add.css">
 </head>
 <body>
-    <form action="/form" method="post">
+    <form action="/update/<%= transaction.id %>" method="post">
         <div class="add">
-            <input class="amount" type="text" name="amount" placeholder="Amount">
-            <textarea name="title" placeholder="Desc"></textarea>
+            <input class="amount" type="text" name="amount" placeholder="Amount" value="<%= transaction.amount %>">
+            <textarea name="title" placeholder="Desc" ><%= transaction.title %></textarea>
             <div class="profit">
-                <input class="checkbox" id="myCheckbox" type="checkbox" name="type">
+                <input class="checkbox" id="myCheckbox" type="checkbox" name="type" value="<%= transaction.type %>">
                 <p>Is profit</p>
             </div>
         </div>

@@ -1,26 +1,39 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
+const dayjs = require('dayjs');
+require('dayjs/locale/tk');
+dayjs.locale('tk');
+
 module.exports = (sequelize, DataTypes) => {
   class Transaction extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
-      // define association here
+      // ilişkiler şu ýerde bellener
     }
   }
+
   Transaction.init({
     title: DataTypes.STRING,
-    amount: DataTypes.INTEGER,
-    type: DataTypes.STRING
+    amount: DataTypes.FLOAT,
+    type: DataTypes.STRING,
+    createdAt: {
+      type: DataTypes.DATE,
+      get() {
+        const rawDate = this.getDataValue('createdAt');
+        return rawDate ? dayjs(rawDate).format('D MMMM YYYY') : null;
+      }
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      get() {
+        const rawDate = this.getDataValue('updatedAt');
+        return rawDate ? dayjs(rawDate).format('D MMMM YYYY, dddd HH:mm:ss') : null;
+      }
+    }
   }, {
     sequelize,
     modelName: 'Transaction',
     tableName: 'transactions'
   });
+
   return Transaction;
 };

@@ -1,0 +1,18 @@
+th{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+td{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    gap: 20px 20px;
+}
+tr{
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

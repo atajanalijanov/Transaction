@@ -5,6 +5,7 @@
     "migrate": "npx sequelize-cli db:migrate"
   },
   "dependencies": {
+    "dayjs": "^1.11.15",
     "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",

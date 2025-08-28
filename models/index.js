@@ -16,6 +16,25 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
+const dayjs = require('dayjs');
+require('dayjs/locale/tk');
+dayjs.locale('tk');
+
+module.exports = (sequelize, DataTypes) => {
+  const Transaction = sequelize.define('Transaction', {
+    amount: DataTypes.FLOAT,
+    type: DataTypes.STRING,
+    createdAt: {
+      type: DataTypes.DATE,
+      get() {
+        const rawDate = this.getDataValue('createdAt');
+        return dayjs(rawDate).format('D MMMM YYYY, dddd HH:mm:ss');
+      }
+    }
+  });
+  return Transaction;
+};
+
 fs
   .readdirSync(__dirname)
   .filter(file => {

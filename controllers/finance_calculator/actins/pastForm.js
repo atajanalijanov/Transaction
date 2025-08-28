@@ -1,5 +1,5 @@
 const {Transaction} = require('../../../models');
-const tape = require('../../../public/click');
+const tape = require('../../../public/js/click');
 
 module.exports = async (req,res) => {
 console.log(req.body);
