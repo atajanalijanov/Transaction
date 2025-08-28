@@ -7,7 +7,6 @@ dayjs.locale('tk');
 module.exports = (sequelize, DataTypes) => {
   class Transaction extends Model {
     static associate(models) {
-      // ilişkiler şu ýerde bellener
     }
   }
 
