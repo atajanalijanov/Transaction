@@ -7,20 +7,32 @@
     <link rel="stylesheet" href="/css/add.css">
 </head>
 <body>
-    <form action="/form" method="post">
-        <div class="add">
-            <input class="amount" type="text" name="amount" placeholder="Amount">
-            <textarea name="title" placeholder="Desc"></textarea>
-            <div class="profit">
-                <input class="checkbox" id="myCheckbox" type="checkbox" name="type">
-                <p>Is profit</p>
-            </div>
+    <div class="container">
+        <div class="title">
+            <a href="/">
+                <img src="/img/strelka.svg">
+            </a>
+            <h2>Add Transaction</h2>
         </div>
-        <div class="button">
-            <button class="save" type="submit">Save</button>
-            <a href="">Reset</a>
+        <div class="card">
+            <h2>Transaction Details</h2>
+            <form action="/form" method="post">
+                <div class="add">
+                    <h4>Amount</h4>
+                    <input class="amount" type="text" name="amount" placeholder="0.00">
+                    <h4>Title</h4>
+                    <textarea name="title" placeholder="Enter ransaction title"></textarea>
+                    <div class="profit">
+                        <input class="checkbox" id="myCheckbox" type="checkbox" name="type">
+                        <p>Is profit</p>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="save" type="submit">Add Transaction</button>
+                    <a href="/">Cancel</a>
+                </div>
+            </form>
         </div>
-    </form>
-    <script src="/js/click.js"></script>
+    </div>
 </body>
 </html>

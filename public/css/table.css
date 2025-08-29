@@ -1,18 +1,27 @@
 th{
-    width: 25%;
+    width: 23%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    font-weight: 500;
+    padding-bottom: 7px;
 }
 td{
-    width: 25%;
+    width: 23%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     gap: 20px 20px;
+    padding: 7px;
+    border-top: 1px solid #0000001a;
+}
+.actions{
+    justify-content: end;
 }
 tr{
     margin: 10px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+}
+.actions img{
+    width: 24px;
+    height: 24px;
 }

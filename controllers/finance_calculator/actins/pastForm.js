@@ -1,5 +1,4 @@
 const {Transaction} = require('../../../models');
-const tape = require('../../../public/js/click');
 
 module.exports = async (req,res) => {
 console.log(req.body);
@@ -18,7 +17,7 @@ console.log(req.body);
         let data = await Transaction.create({
             title,
             amount,
-            type:tape
+            type: type ? 'income' : 'expense'
         })
         return res.redirect("/")
     } catch(error) {

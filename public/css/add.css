@@ -1,10 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #1e2939;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";  
+}
 body{
-    margin: 200px 0px;
-    background-color: #aaaaaa;
+    background-color: oklch(.985 .002 247.839);
+}
+.container{
+    padding: 28px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
+.title{
+    width: 588px;
+    display: flex;
+    gap: 14px;
+    margin-bottom: 21px;
+}
+.title img{
+    width: 14;
+    height: 17.500px;
+    padding: 7px 10.5px;
+    border-radius: 6.75px;
+}
+.title h2{
+    font-size: 26.25px;
+    font-weight: 500;
 }
 form{
     gap: 40px;
@@ -13,7 +36,6 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: 20px;
 }
 .checkbox{
     display: flex;
@@ -22,31 +44,49 @@ form{
 }
 .button{
     display: flex;
-    gap: 40px;
+    gap: 10.5px;
 }
 .button a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 40px;
-    color: #ffffff;
     text-decoration: none;
-    background-color: #0d6efd;
+    background-color: #ffffff;
     border-radius: 50px;
-    padding: 3px 15px;
-    font-size: 22px;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    border: 1px solid black;
+    padding: 10.500px 14px;
+    font-weight: 500;
+    font-size: 12.25px;
+    width: 80.63px;
+    height: 10.500px;
 }
 .amount{
-    width: 500px;
-    height: 40px;
-    font-size: 22px;
-    border-radius: 50px;
+    width: 523px;
+    height: 22.500px;
+    background-color: #f3f3f5;
+    font-size: 12.25px;
+    border-radius: 8.75px;
     padding: 5px;
+    border: none;
+    margin-bottom: 21px;
 }
 .add textarea{
-    width: 500px;
+    width: 523px;
     font-size: 22px;
     height: 190px;
+    background-color: #f3f3f5;
+    font-size: 12.25px;
+    border-radius: 8.75px;
+    padding: 5px;
+    border: none;
+    resize: none;
+    overflow: auto;
+    margin-bottom: 21px; 
+}
+.checkbox{
     border-radius: 50px;
-    padding: 15px;
+    background-color: #f3f3f5;
 }
 .profit{
     display: flex;
@@ -54,16 +94,32 @@ form{
 }
 .profit p{
     font-size: 16px;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .save{
+    width: 456.88px;
     margin-top: 40px;
     color: #ffffff;
     text-decoration: none;
     background-color: #0d6efd;
     border-radius: 50px;
-    padding: 3px 15px;
+    padding: 10.500px 14px;
     border: none;
-    font-size: 22px;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";  
+    font-weight: 500;
+    font-size: 12.25px;
+}
+.card{
+    width: 546px;
+    padding: 21px;
+    background-color: #ffffff;
+    border-radius: 12.75px;
+}
+.card h2{
+    font-size: 17.5px;
+    font-weight: inherit;
+    margin-bottom: 21px;
+}
+.add h4{
+    font-weight: 500;
+    font-size: 12.25px;
+    margin-bottom: 7px;
 }

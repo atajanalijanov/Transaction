@@ -1,46 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
 body{
-    background-color: #aaaaaa;
+    background-color: oklch(.985 .002 247.839);
+}
+.container{
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 28px;
+}
+.income{
+    
 }
 a{
     text-decoration: none;
 }
 .add{
-    width: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 1008px;
+    margin-bottom: 28px;
+}
+.add h2{
+    color: oklch(.278 .033 256.848);
+    font-weight: 500;
+}
+.add a{
     color: #ffffff;
     background-color: #0d6efd;
-    border-radius: 50px;
-    padding: 3px 15px;
-    font-size: 22px;
+    padding: 7px 21px;
+    border-radius: .625rem;
+    font-size: .875rem;
+    height: min-content;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-.table{
-    width: 90%;
-    height: 40px;
-    margin:0px 100px;
+.card{
+    width: 1008px;
+    background-color: #ffffff;
+    padding: 21px;
+    padding-right: 40px;
+    border-radius: .625rem;
     display: flex;
-    justify-content: space-evenly;
-    align-items:center;
-    background-color: #3d3d3d;
-    border: 2px solid white;
+    flex-direction: column;
+    gap: 21px;
+    margin-bottom: 28px;
 }
-.table h3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
-    height: 100%;
-    color: #ffffff;
-    border: 1px solid white;
+.card h3{
+    font-weight: inherit;
+    font-size: 15.75px;
+    padding-bottom:5.25px;
 }
-.add_and_remaining{
-    display: flex;
-    gap: 50px;
-    align-items: center;
-}
-.add_and_remaining h1{
-    font-weight: 400;
+.card h1{
+    font-weight: 700;
+    font-size: 31.5px;
 }

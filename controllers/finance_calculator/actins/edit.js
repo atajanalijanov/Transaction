@@ -3,7 +3,12 @@ const {Transaction} = require("../../../models")
 module.exports = async (req, res) => {
     try {
         let {id} = req.params
-        let transaction = await Transaction.findOne({id})
+        let transaction = await Transaction.findOne({
+            
+            where:{
+                id
+            }
+        })
         console.log(transaction);
         console.log(id);
         

@@ -8,21 +8,30 @@
     <link rel="stylesheet" href="/css/table.css">
 </head>
 <body>
-    <div class="add_and_remaining">
-        <a class="add" href="./add">ADD</a>
-        <h1>$<%= remaining %></h1>
+    <div class="container">
+        <div class="add">
+            <h2>My Account</h2>
+        <a href="./add">ADD</a>
+        </div>
+        <div class="card">
+            <h3>Current Balance</h3>
+            <h1>$<%= remaining %></h1>
+        </div>
+        <div class="card">
+            <h3>Recent Transactions</h3>
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+                <% transactions.forEach(function(transaction){ %>
+                    <%- include('table/row', {transaction}); %>
+                <% }); %>
+            </table>
+        </div>
     </div>
-    <table>
-        <tr>
-            <th>Title</th>
-            <th>Amount</th>
-            <th>Type</th>
-            <th>Date</th>
-            <th>Actions</th>
-        </tr>
-        <% transactions.forEach(function(transaction){ %>
-            <%- include('table/row', {transaction}); %>
-        <% }); %>
-    </table>
 </body>
 </html>

@@ -1,4 +1,3 @@
-const { where } = require("sequelize")
 const {Transaction} = require("../../../models")
 
 module.exports = async (req, res) => {
@@ -17,7 +16,7 @@ module.exports = async (req, res) => {
             {
                 title,
                 amount,
-                type
+            type: type ? 'income' : 'expense'
             },
             {
                 where: {
