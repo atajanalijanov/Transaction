@@ -15,7 +15,20 @@ body{
     padding: 28px;
 }
 .income{
-    
+    color: #016630;
+}
+.income div{
+    border-radius: 6.75px;
+    background-color: #dcfce7;
+    padding: 1.750px 7px;
+}
+.expense{
+    color: #e7000b;
+}
+.expense div{
+    border-radius: 6.75px;
+    background-color: #ffe2e2;
+    padding: 1.750px 7px;
 }
 a{
     text-decoration: none;
