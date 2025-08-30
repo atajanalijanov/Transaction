@@ -1,8 +1,14 @@
 <tr>
     <td><%= transaction.title %></td>
-    <td><%= transaction.amount %></td>
-    <td class="<%= transaction.type %>">
-        <div><%= transaction.type %></div></td>
+
+    <td class="<%= transaction.type == 'income' ? "income_amount" : "expense_amount" %>">
+        <%= transaction.type == 'income' ? "+" : "-" %><%= transaction.amount %>
+    </td>
+
+    <td class="<%= transaction.type == 'income' ? "income test1" : "expense test2" %>">
+        <div><%= transaction.type %></div>
+    </td>
+   
     <td><%= transaction.createdAt %></td>
     <td>
         <a href="/edit/<%= transaction.id %>">

@@ -25,3 +25,9 @@ tr{
     width: 24px;
     height: 24px;
 }
+.income_amount{
+    color: green;
+}
+.expense_amount{
+    color: red;
+}

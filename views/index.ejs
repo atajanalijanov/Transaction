@@ -15,7 +15,9 @@
         </div>
         <div class="card">
             <h3>Current Balance</h3>
-            <h1>$<%= remaining %></h1>
+            <h1 class="<%= remaining > 0 ? "income_amount" : "expense_amount" %>">
+                <%= remaining > 0 ? "" : "-" %>$<%= Math.abs(remaining) %>
+            </h1>
         </div>
         <div class="card">
             <h3>Recent Transactions</h3>
