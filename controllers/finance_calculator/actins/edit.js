@@ -9,8 +9,6 @@ module.exports = async (req, res) => {
                 id
             }
         })
-        console.log(transaction);
-        console.log(id);
         
         return res.render("edit",{transaction});
     } catch(e) {
