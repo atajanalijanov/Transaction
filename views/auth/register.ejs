@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/add.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <a href="/">
+                <img src="/img/strelka.svg">
+            </a>
+            <h2>Register</h2>
+        </div>
+        <form action="/auth/register" method="post">
+            <div class="add">
+                <h4 for="username">Username *</h4>
+                <input class="amount" type="text" name="username" placeholder="Enter your username" required>
+                <h4 for="password">Password *</h4>
+                <input class="amount" type="password" name="password" placeholder="Enter your password" required>
+                <h4 for="password">Confirm Password *</h4>
+                <input class="amount" type="password" name="confirm_password" placeholder="Enter your password" required>
+            </div>
+            <div class="button">
+                <button class="save" type="submit">Register</button>
+                <a href="/">Cancel</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -2,7 +2,7 @@
     <td><%= transaction.title %></td>
 
     <td class="<%= transaction.type == 'income' ? "income_amount" : "expense_amount" %>">
-        <%= transaction.type == 'income' ? "+" : "-" %><%= transaction.amount %>
+        <%= transaction.type == 'income' ? "+" : "-" %>$<%= transaction.amount %>
     </td>
 
     <td class="<%= transaction.type == 'income' ? "income test1" : "expense test2" %>">

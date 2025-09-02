@@ -4,11 +4,16 @@
     box-sizing: border-box;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+html{
+    height: 100%;
+}
 body{
+    height: 100%;
     background-color: oklch(.985 .002 247.839);
 }
 .container{
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,6 +49,15 @@ a{
     color: oklch(.278 .033 256.848);
     font-weight: 500;
 }
+.button{
+    color: #ffffff;
+    background-color: #0d6efd;
+    padding: 7px 21px;
+    border-radius: .625rem;
+    font-size: .875rem;
+    height: min-content;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
 .add a{
     color: #ffffff;
     background-color: #0d6efd;
@@ -72,4 +86,31 @@ a{
 .card h1{
     font-weight: 700;
     font-size: 31.5px;
+}
+.user{
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 20px;
+}
+.user a{
+    color: #ffffff;
+    background-color: #0d6efd;
+    padding: 7px 21px;
+    border-radius: .625rem;
+    font-size: .875rem;
+    height: min-content;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    width: 200px;
+    height: 200px;
 }

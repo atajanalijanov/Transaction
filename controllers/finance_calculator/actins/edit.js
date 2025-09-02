@@ -4,7 +4,6 @@ module.exports = async (req, res) => {
     try {
         let {id} = req.params
         let transaction = await Transaction.findOne({
-            
             where:{
                 id
             }

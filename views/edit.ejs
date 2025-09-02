@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="title">
-            <a href="/">
+            <a href="/balance/">
                 <img src="/img/strelka.svg">
             </a>
             <h2>Edit Transaction</h2>
@@ -23,7 +23,7 @@
                     <h4>Title</h4>
                     <textarea name="title" placeholder="Enter ransaction title"><%= transaction.title %></textarea>
                     <div class="profit">
-                        <input class="checkbox" id="myCheckbox" type="checkbox" name="type">
+                        <input class="checkbox" id="myCheckbox" type="checkbox" name="type" <%= transaction.type == "income" ? "checked" : "" %> >
                         <p>Is profit</p>
                     </div>
                 </div>

@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
             }
         })
 
-        return res.redirect("/")
+        return res.redirect("/balance/")
 
     } catch(e) {
         console.log(e);

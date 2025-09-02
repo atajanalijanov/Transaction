@@ -7,7 +7,9 @@ console.log(req.body);
             title,
             amount,
             type
-        } = req.body
+        } = req.body        
+
+        let userId = req.session.userId
 
         if (!amount || !title ) {
             res.status(400).send("Please write in full.")
@@ -16,10 +18,11 @@ console.log(req.body);
         
         let data = await Transaction.create({
             title,
+            userId,
             amount,
             type: type ? 'income' : 'expense'
         })
-        return res.redirect("/")
+        return res.redirect("/balance/")
     } catch(error) {
         console.log(error);
         return res.status(500).send(error)

@@ -25,7 +25,7 @@ module.exports = async (req, res) => {
             }
         );
 
-        return res.redirect("/")
+        return res.redirect("/balance/")
     } catch(e) {
         console.log(e);
         return res.status(500).send(e.message)

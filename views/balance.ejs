@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finace calculator</title>
+    <link rel="stylesheet" href="/css/finance.css">
+    <link rel="stylesheet" href="/css/table.css">
+</head>
+<body>
+    <div class="container">
+        <div class="add">
+            <h2>My Account</h2>
+        <a href="./add">Add Transaction</a>
+        </div>
+        <div class="card">
+            <h3>Current Balance</h3>
+            <h1 class="<%= remaining >= 0 ? "income_amount" : "expense_amount" %>">
+                <%= remaining >= 0 ? "" : "-" %>$<%= Math.abs(remaining) %>
+            </h1>
+        </div>
+        <div class="card">
+            <h3>Recent Transactions</h3>
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+                <% transactions.forEach(function(transaction){ %>
+                    <%- include('table/row', {transaction}); %>
+                <% }); %>
+            </table>
+
+        </div>
+        <div class="user" style="margin-top: auto;">
+            <a href="/auth/logout">logout</a>
+        </div>
+    </div>
+</body>
+</html>

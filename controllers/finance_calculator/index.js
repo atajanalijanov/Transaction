@@ -1,12 +1,12 @@
 const add = require('./actins/add')
-const index = require('./actins/index')
+const finance = require('./actins/finance')
 const pastForm = require('./actins/pastForm')
 const edit = require('./actins/edit')
 const remove = require('./actins/delete')
 const update = require('./actins/update')
 
 module.exports = {
-    index,
+    finance,
     add,
     pastForm,
     edit,

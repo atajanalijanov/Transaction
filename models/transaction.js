@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
   }
 
   Transaction.init({
+    userId:DataTypes.FLOAT,
     title: DataTypes.STRING,
     amount: DataTypes.FLOAT,
     type: DataTypes.STRING,
