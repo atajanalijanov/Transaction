@@ -19,6 +19,8 @@
                 <%= remaining >= 0 ? "" : "-" %>$<%= Math.abs(remaining) %>
             </h1>
         </div>
+
+        <% if (transactions.length > 0) { %>
         <div class="card">
             <h3>Recent Transactions</h3>
             <table>
@@ -30,11 +32,11 @@
                     <th>Actions</th>
                 </tr>
                 <% transactions.forEach(function(transaction){ %>
-                    <%- include('table/row', {transaction}); %>
+                    <%- include('table/row', { transaction: transaction }) %>
                 <% }); %>
             </table>
-
         </div>
+        <% } %>
         <div class="user" style="margin-top: auto;">
             <a href="/auth/logout">logout</a>
         </div>

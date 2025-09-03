@@ -7,7 +7,7 @@ console.log(req.body);
             title,
             amount,
             type
-        } = req.body        
+        } = req.body
 
         let userId = req.session.userId
 
@@ -15,7 +15,7 @@ console.log(req.body);
             res.status(400).send("Please write in full.")
             return
         }
-        
+
         let data = await Transaction.create({
             title,
             userId,
