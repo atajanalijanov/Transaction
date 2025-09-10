@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
             {
                 title,
                 amount,
-            type: type ? 'income' : 'expense'
+                type: type ? 'income' : 'expense'
             },
             {
                 where: {
@@ -25,7 +25,7 @@ module.exports = async (req, res) => {
             }
         );
 
-        return res.redirect("/balance/")
+        return res.redirect("/balance")
     } catch(e) {
         console.log(e);
         return res.status(500).send(e.message)

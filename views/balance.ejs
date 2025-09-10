@@ -11,7 +11,21 @@
     <div class="container">
         <div class="add">
             <h2>My Account</h2>
-        <a href="./add">Add Transaction</a>
+            <div class="users">
+                <a class="add_tr" href="./add">Add Transaction</a>
+                <div class="logout">
+                    <input type="checkbox" id="check">
+                    <label class="icon" for="check">
+                        <img id="user" src="/img/user.svg">
+                    </label>
+                    <div class="menu">
+                        <label for="check">
+                            <img id="x" src="/img/x.svg">
+                        </label>
+                        <a href="/auth/logout">Logout</a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="card">
             <h3>Current Balance</h3>
@@ -37,9 +51,6 @@
             </table>
         </div>
         <% } %>
-        <div class="user" style="margin-top: auto;">
-            <a href="/auth/logout">logout</a>
-        </div>
     </div>
 </body>
 </html>

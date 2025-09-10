@@ -16,7 +16,7 @@
         </div>
         <div class="card">
             <h2>Transaction Details</h2>
-            <form action="/update/<%= transaction.id %>" method="post">
+            <form action="/balance/update/<%= transaction.id %>" method="post">
                 <div class="add">
                     <h4>Amount</h4>
                     <input class="amount" type="text" name="amount" placeholder="0.00" value="<%= transaction.amount %>">

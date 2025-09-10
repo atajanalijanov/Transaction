@@ -8,7 +8,7 @@
     <td class="<%= transaction.type == 'income' ? "income test1" : "expense test2" %>">
         <div><%= transaction.type %></div>
     </td>
-   
+
     <td><%= transaction.createdAt %></td>
     <td>
         <a href="/balance/edit/<%= transaction.id %>">
