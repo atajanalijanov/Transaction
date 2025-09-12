@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
                 id
             }
         })
-        
+
         return res.render("edit",{transaction});
     } catch(e) {
         console.log(e);

@@ -111,17 +111,13 @@ a{
     align-items: center;
 }
 .menu{
-    opacity: 0;
+    display: none;
     width: 200px;
     height: 70px;
     position: absolute;
     border-radius: .625rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-decoration: none;
     padding: 10px;
-    gap: 10px;
     right: 450px;
     background-color: oklch(.985 .002 247.839);
     border: 1px solid #00000052;
@@ -145,16 +141,54 @@ a{
 #check{
     display: none;
 }
-#x{
-    display: none;
-}
 #check:checked ~ .menu #x {
-display: block;
+    display: block;
 }
 #check:checked ~ .menu{
-    opacity: 1;
+    display: block;
 }
 .logout{
     width: 50px;
     height: 50px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+.calendar{
+    display: none;
+    width: 200px;
+    height: auto;
+    position: absolute;
+    border-radius: .625rem;
+    text-decoration: none;
+    padding: 10px;
+    right: 500px;
+    bottom: 170px;
+    background-color: oklch(.985 .002 247.839);
+    border: 1px solid #00000052;
+    backdrop-filter: blur(50px);
+}
+.calendar a{
+    width: 100%;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    font-weight: 400;
+    border-top: 1px solid #00000052;
+}
+.calendar label{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+#check_ca{
+    display: none;
+}
+#check_ca:checked ~ .calendar #x {
+display: block;
+}
+#check_ca:checked ~ .calendar{
+    display: block;
 }

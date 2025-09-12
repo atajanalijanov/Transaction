@@ -8,5 +8,6 @@ router.post('/form', controller.pastForm);
 router.get('/edit/:id', controller.edit);
 router.post('/update/:id', controller.update);
 router.get('/delete/:id', controller.remove);
+router.get('/calendar/:year/:month', controller.calendar);
 
 module.exports = router;

@@ -4,6 +4,7 @@ const pastForm = require('./actins/pastForm')
 const edit = require('./actins/edit')
 const remove = require('./actins/delete')
 const update = require('./actins/update')
+const calendar = require('./actins/calendar')
 
 module.exports = {
     finance,
@@ -11,5 +12,6 @@ module.exports = {
     pastForm,
     edit,
     remove,
-    update
+    update,
+    calendar
 }
