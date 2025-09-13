@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finace calculator</title>
+    <link rel="stylesheet" href="/css/finance.css">
+    <link rel="stylesheet" href="/css/table.css">
+</head>
+<body>
+    <div class="container">
+        <div class="add">
+            <div style="display: flex;align-items: center;gap: 10px;">
+                <a style="display: flex;align-items: center;" href="/balance/">
+                    <img style="height: 17.500px;" src="/img/strelka.svg" alt="">
+                </a>
+                <h2><%= monthName %></h2>
+            </div>
+            <div class="users">
+                <div class="logout">
+                    <input type="checkbox" id="check">
+                    <label class="icon" for="check">
+                        <img src="/img/user.svg">
+                    </label>
+                    <div class="menu">
+                        <label for="check">
+                            <img id="x" src="/img/x.svg">
+                        </label>
+                        <a href="/auth/logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Current Balance</h3>
+            <h1 class="<%= remaining >= 0 ? "income_amount" : "expense_amount" %>">
+                <%= remaining >= 0 ? "" : "-" %>$<%= Math.abs(remaining) %>
+            </h1>
+        </div>
+        <% if (transactions.length > 0) { %>
+        <div class="card">
+            <div class="title">
+                <h3>Recent Transactions</h3>
+                    <input type="checkbox" id="check_ca">
+                    <label class="icon" for="check_ca">
+                        <img src="/img/calendar.svg">
+                    </label>
+                    <div class="calendar">
+                        <label for="check_ca">
+                            <img id="x" src="/img/x.svg">
+                        </label>
+                        <a href="/balance/calendar/2025/1">Yanwar</a>
+                        <a href="/balance/calendar/2025/2">Fewral</a>
+                        <a href="/balance/calendar/2025/3">Mart</a>
+                        <a href="/balance/calendar/2025/4">Aprel</a>
+                        <a href="/balance/calendar/2025/5">May</a>
+                        <a href="/balance/calendar/2025/6">Iyun</a>
+                        <a href="/balance/calendar/2025/7">Iyul</a>
+                        <a href="/balance/calendar/2025/8">Awgust</a>
+                        <a href="/balance/calendar/2025/9">Sentyabr</a>
+                        <a href="/balance/calendar/2025/10">Oktyabr</a>
+                        <a href="/balance/calendar/2025/11">Noyabr</a>
+                        <a href="/balance/calendar/2025/12">Dekabr</a>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+                <% transactions.forEach(function(transaction){ %>
+                    <%- include('folder/row', { transaction: transaction }) %>
+                <% }); %>
+            </table>
+        </div>
+        <% } %>
+    </div>
+</body>
+</html>
