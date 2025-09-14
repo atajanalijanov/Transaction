@@ -7,6 +7,64 @@
 body{
     background-color: oklch(.985 .002 247.839);
 }
+
+/* Checkbox görünmesin */
+#check {
+    display: none;
+}
+
+.button_profit {
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: 20px;
+    background-color: #cbced4;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 2px;
+    transition: justify-content 0.4s ease, background-color 0.4s ease;
+}
+.circle {
+    top: 2px;
+    left: 2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.income {
+    color: #cbced4;
+}
+
+.expense {
+    color: red;
+}
+
+/* Toggle aktif olunca */
+#check:checked ~ label .button_profit {
+    justify-content: end;
+    background-color: black;
+}
+
+#check:checked + label .circle {
+    transform: translateX(15px);
+}
+
+#check:checked ~ .income {
+    color: green;
+}
+
+#check:checked ~ .expense {
+    color: #cbced4;
+}
+
+.profit div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
 .container{
     padding: 28px;
     display: flex;

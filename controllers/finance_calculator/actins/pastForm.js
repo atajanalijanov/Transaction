@@ -5,7 +5,8 @@ module.exports = async (req,res) => {
         let {
             title,
             amount,
-            type
+            type,
+            date
         } = req.body
 
         let userId = req.session.userId
@@ -19,7 +20,8 @@ module.exports = async (req,res) => {
             title,
             userId,
             amount,
-            type: type ? 'income' : 'expense'
+            type: type ? 'income' : 'expense',
+            createdAt: date
         })
         return res.redirect("/balance/")
     } catch(error) {
